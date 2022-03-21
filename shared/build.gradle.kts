@@ -30,6 +30,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
                 implementation("io.ktor:ktor-client-serialization:1.6.7")
+                implementation("io.insert-koin:koin-core:3.1.5")
             }
         }
         val commonTest by getting {
