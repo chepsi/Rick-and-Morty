@@ -37,6 +37,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("test"))
                 implementation("io.ktor:ktor-client-mock:$ktorVersion")
+                implementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
             }
         }
         val androidMain by getting {

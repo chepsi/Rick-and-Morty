@@ -23,7 +23,7 @@ fun CharactersApiModel.toData(): Collection<CharacterDataModel> =
                 character.origin?.url.orEmpty()
             ),
             species = character.species.orEmpty(),
-            status = character.species.orEmpty(),
+            status = character.status.orEmpty(),
             type = character.type.orEmpty(),
             url = character.url.orEmpty()
         )
