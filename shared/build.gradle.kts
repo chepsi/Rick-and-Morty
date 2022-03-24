@@ -13,6 +13,7 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+    jvm()
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -37,12 +38,19 @@ kotlin {
             dependencies {
                 implementation(kotlin("test"))
                 implementation("io.ktor:ktor-client-mock:$ktorVersion")
-                implementation("org.junit.jupiter:junit-jupiter-params:5.8.2")
+                implementation("io.mockk:mockk-common:1.12.2")
             }
         }
         val androidMain by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
+            }
+        }
+        val jvmTest by getting {
+            dependencies {
+                implementation(kotlin("test"))
+                implementation("io.ktor:ktor-client-mock:$ktorVersion")
+                implementation("io.mockk:mockk:1.12.2")
             }
         }
         val androidTest by getting
@@ -69,6 +77,10 @@ kotlin {
             iosSimulatorArm64Test.dependsOn(this)
         }
     }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 android {

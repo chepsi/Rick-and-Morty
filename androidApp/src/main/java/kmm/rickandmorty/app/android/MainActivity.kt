@@ -1,9 +1,8 @@
 package kmm.rickandmorty.app.android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kmm.rickandmorty.app.Greeting
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 fun greet(): String {
     return Greeting().greeting()

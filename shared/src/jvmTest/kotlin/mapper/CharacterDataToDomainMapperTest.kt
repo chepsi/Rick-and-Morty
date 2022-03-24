@@ -1,5 +1,6 @@
-package kmm.rickandmorty.app.data.mapper
+package mapper
 
+import kmm.rickandmorty.app.data.mapper.toDomain
 import kmm.rickandmorty.app.data.model.CharacterDataModel
 import kmm.rickandmorty.app.data.model.CharacterDataModel.CharacterLocation
 import kmm.rickandmorty.app.data.model.CharacterDataModel.CharacterOrigin
