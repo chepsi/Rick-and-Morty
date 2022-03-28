@@ -5,7 +5,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 fun greet(): String {
-    return Greeting().greeting()
+    return "Greet"
 }
 
 class MainActivity : AppCompatActivity() {
