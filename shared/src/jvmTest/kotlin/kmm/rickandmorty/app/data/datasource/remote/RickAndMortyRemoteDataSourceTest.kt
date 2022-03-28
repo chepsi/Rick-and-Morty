@@ -1,8 +1,5 @@
-package datasource.remote
+package kmm.rickandmorty.app.data.datasource.remote
 
-import datasource.remote.fakes.charactersJsonString
-import datasource.remote.fakes.episodes
-import datasource.remote.fakes.locations
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.mock.MockEngine
 import io.ktor.client.engine.mock.respond
@@ -12,7 +9,9 @@ import io.ktor.http.HttpHeaders
 import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.utils.io.ByteReadChannel
-import kmm.rickandmorty.app.data.datasource.remote.RickAndMortyRemoteDataSource
+import kmm.rickandmorty.app.data.datasource.remote.fakes.charactersJsonString
+import kmm.rickandmorty.app.data.datasource.remote.fakes.episodes
+import kmm.rickandmorty.app.data.datasource.remote.fakes.locations
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.json.Json
 import kotlin.test.Test

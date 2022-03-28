@@ -1,6 +1,5 @@
-package datasource.mapper
+package kmm.rickandmorty.app.data.datasource.mapper
 
-import kmm.rickandmorty.app.data.datasource.mapper.toData
 import kmm.rickandmorty.app.data.datasource.remote.model.CharactersApiModel
 import kmm.rickandmorty.app.data.model.CharacterDataModel
 import kotlin.test.Test

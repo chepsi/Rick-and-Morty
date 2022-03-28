@@ -1,16 +1,15 @@
-package repository
+package kmm.rickandmorty.app.data.repository
 
-import datasource.remote.fakes.expectedCharacterDomainModel
-import datasource.remote.fakes.fakeEpisodeDataModel
-import datasource.remote.fakes.fakeEpisodeDomainModel
-import datasource.remote.fakes.fakeLocationDataModel
-import datasource.remote.fakes.fakeLocationDomainModel
-import datasource.remote.fakes.givenCharacterDataModel
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import kmm.rickandmorty.app.data.datasource.remote.RickAndMortyRemoteSource
-import kmm.rickandmorty.app.data.repository.RickAndMortyDataRepository
+import kmm.rickandmorty.app.data.datasource.remote.fakes.expectedCharacterDomainModel
+import kmm.rickandmorty.app.data.datasource.remote.fakes.fakeEpisodeDataModel
+import kmm.rickandmorty.app.data.datasource.remote.fakes.fakeEpisodeDomainModel
+import kmm.rickandmorty.app.data.datasource.remote.fakes.fakeLocationDataModel
+import kmm.rickandmorty.app.data.datasource.remote.fakes.fakeLocationDomainModel
+import kmm.rickandmorty.app.data.datasource.remote.fakes.givenCharacterDataModel
 import kotlinx.coroutines.runBlocking
 import kotlin.test.BeforeTest
 import kotlin.test.Test

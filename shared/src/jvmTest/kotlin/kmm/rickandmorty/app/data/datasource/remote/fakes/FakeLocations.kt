@@ -1,4 +1,4 @@
-package datasource.remote.fakes
+package kmm.rickandmorty.app.data.datasource.remote.fakes
 
 import kmm.rickandmorty.app.data.model.LocationDataModel
 import kmm.rickandmorty.app.domain.models.LocationDomainModel
