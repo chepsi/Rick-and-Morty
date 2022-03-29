@@ -9,10 +9,41 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    
+    init() {
+          UITabBar.appearance().barTintColor = .white
+      }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+
+                TabView {
+                 CharactersView()
+                      .tabItem {
+                          Image("character")
+                              .renderingMode(.template)
+                              .foregroundColor(.gray)
+                      }
+                  
+                  LocationsView()
+                      .tabItem {
+                          Image("locations")
+                              .renderingMode(.template)
+                              .foregroundColor(.gray)
+                      }
+                  
+                  EpisodesView()
+                      .tabItem {
+                          Image("episode")
+                              .renderingMode(.template)
+                              .foregroundColor(.gray)
+                      
+                      }
+              }//: TABVIEW
+              .accentColor(.black)
+          }
+      }
+    
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
