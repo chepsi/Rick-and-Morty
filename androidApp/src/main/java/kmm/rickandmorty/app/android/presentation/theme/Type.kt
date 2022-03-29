@@ -2,9 +2,11 @@ package kmm.rickandmorty.app.android.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import kmm.rickandmorty.app.android.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -25,4 +27,12 @@ val Typography = Typography(
         fontSize = 12.sp
     )
     */
+)
+
+val muli = FontFamily(
+    Font(R.font.muli, FontWeight.Normal)
+)
+
+val lato = FontFamily(
+    Font(R.font.lato_bold, FontWeight.Bold)
 )
