@@ -3,13 +3,13 @@ package kmm.rickandmorty.app.android.presentation.activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import kmm.rickandmorty.app.android.presentation.components.core.BottomNavComponent
+import kmm.rickandmorty.app.android.presentation.components.core.Navigation
+import kmm.rickandmorty.app.android.presentation.components.core.TopBar
 import kmm.rickandmorty.app.android.presentation.theme.Rick__Morty_KMMTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,26 +18,25 @@ class MainActivity : ComponentActivity() {
         setContent {
             Rick__Morty_KMMTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                MainScreen()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun MainScreen() {
+    val navController = rememberNavController()
+    Scaffold(
+        topBar = { TopBar() },
+        bottomBar = { BottomNavComponent(navController) }
+    ) {
+        Navigation(navHostController = navController)
+    }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
-fun DefaultPreview() {
-    Rick__Morty_KMMTheme {
-        Greeting("Android")
-    }
+fun MainScreenPreview() {
+    MainScreen()
 }

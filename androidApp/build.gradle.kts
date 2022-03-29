@@ -3,6 +3,7 @@ plugins {
     kotlin("android")
 }
 val composeVersion by extra("1.2.0-alpha06")
+val navVersion by extra("2.4.1")
 
 android {
     compileSdk = 31
@@ -55,4 +56,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$composeVersion")
     debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
+
+    implementation("androidx.navigation:navigation-compose:$navVersion")
 }
