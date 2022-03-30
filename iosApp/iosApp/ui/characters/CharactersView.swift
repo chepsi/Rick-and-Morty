@@ -10,7 +10,28 @@ import SwiftUI
 
 struct CharactersView: View {
     var body: some View {
-        Text("Character")
+        
+        VStack {
+            HStack{
+                Image("character")
+                    .renderingMode(.template)
+                    .foregroundColor(ColorManager.primary)
+                Spacer()
+                Button(action: {
+                    
+                }) {
+                    ZStack {
+                        Image("search")
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
+            .padding()
+            Spacer()
+            
+            Text("Character")
+        }
     }
 }
 
