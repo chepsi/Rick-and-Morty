@@ -9,12 +9,18 @@
 import SwiftUI
 
 struct ColorManager {
-    
-    
-    static let primaryColor = Color("PrimaryColor")
-    static let secondaryColor = Color("SecondaryColor")
+
+//    static let primaryColor = Color("PrimaryColor")
+//    static let secondaryColor = Color("SecondaryColor")
 
     
 }
 
-
+extension UIColor {
+    class var primaryColor: UIColor {
+        return UIColor(named: "PrimaryColor")!
+    }
+    class var secondaryColor: UIColor {
+        return UIColor(named: "SecondaryColor")!
+    }
+}
