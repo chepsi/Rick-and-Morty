@@ -17,6 +17,7 @@
 		6164584927F2276500DB293C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6164584827F2276500DB293C /* Images.xcassets */; };
 		6164584B27F2278C00DB293C /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164584A27F2278C00DB293C /* TextExtensions.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		8FC19EA127F38BAE0074B382 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC19EA027F38BAE0074B382 /* ColorManager.swift */; };
 		950D2E5D4851CE3ECDE1E48D /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09FCDD39A6ED53F8A1FFCD4 /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FC19EA027F38BAE0074B382 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		C09FCDD39A6ED53F8A1FFCD4 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F834A27FE89A684BF885ACE1 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				6164584A27F2278C00DB293C /* TextExtensions.swift */,
+				8FC19EA027F38BAE0074B382 /* ColorManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				6164584027F2268500DB293C /* LocationsView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				8FC19EA127F38BAE0074B382 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
