@@ -9,7 +9,5 @@ class RickAndMortyApp : Application() {
     }
 
     private fun setupKoin() {
-
     }
-
 }
