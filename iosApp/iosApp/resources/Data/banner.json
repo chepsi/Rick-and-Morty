@@ -1,0 +1,15 @@
+[
+  {
+    "id" : 1,
+    "image" : "banner1"
+  },
+  {
+    "id" : 2,
+    "image" : "banner2"
+  },
+  {
+    "id" : 3,
+    "image" : "banner3"
+  }
+  
+]
