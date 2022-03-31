@@ -10,7 +10,17 @@ import SwiftUI
 
 struct BannerTabview: View {
     var body: some View {
-       Text("Hello")
+        
+        TabView {
+            ForEach(banners) { banner in
+                BannerItemView(banner: banner)
+                //                    .padding(.top, 10)
+                //                    .padding(.horizontal, 15)
+                //                    .padding(.bottom, 10)
+                
+            }//: LOOP
+        } //: TAB
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 
