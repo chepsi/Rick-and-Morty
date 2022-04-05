@@ -9,7 +9,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import kmm.rickandmorty.app.android.presentation.components.core.BottomNavComponent
 import kmm.rickandmorty.app.android.presentation.components.core.Navigation
-import kmm.rickandmorty.app.android.presentation.components.core.TopBar
 import kmm.rickandmorty.app.android.presentation.theme.Rick__Morty_KMMTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +16,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Rick__Morty_KMMTheme {
-                // A surface container using the 'background' color from the theme
                 MainScreen()
             }
         }
@@ -28,7 +26,6 @@ class MainActivity : ComponentActivity() {
 fun MainScreen() {
     val navController = rememberNavController()
     Scaffold(
-        topBar = { TopBar() },
         bottomBar = { BottomNavComponent(navController) }
     ) {
         Navigation(navHostController = navController)
