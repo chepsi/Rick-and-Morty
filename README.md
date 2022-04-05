@@ -1,5 +1,17 @@
 # Rick-and-Morty KMM App
 
+
+## Running
+Once you clone the project:
+### iOS
+Execute the following commands 
+- cd iosApp/
+- pod install
+- open iosApp.xcworkspace
+
+### Android
+1. Open the project on android studio
+
 ## Design
 Below is the link to the app design credit to TD here is his email for business: Jakestrevor4@gmail.com
 
