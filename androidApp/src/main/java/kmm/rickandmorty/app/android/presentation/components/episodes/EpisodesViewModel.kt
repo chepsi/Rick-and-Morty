@@ -14,15 +14,15 @@ class EpisodesViewModel(
     private val rickAndMortyRepository: RickAndMortyRepository
 ) : ViewModel() {
 
-    private val charactersUiState: MutableStateFlow<EpisodesUiState> =
+    private val episodesUiState: MutableStateFlow<EpisodesUiState> =
         MutableStateFlow(Loading)
-    val characters = charactersUiState.asStateFlow()
+    val episodes = episodesUiState.asStateFlow()
 
     fun fetchEpisodes() {
         viewModelScope.launch {
             val result = rickAndMortyRepository.fetchEpisodes()
                 .map { character -> character.toPresentation() }
-            charactersUiState.value = EpisodesUiState.Success(result)
+            episodesUiState.value = EpisodesUiState.Success(result)
         }
     }
 }
