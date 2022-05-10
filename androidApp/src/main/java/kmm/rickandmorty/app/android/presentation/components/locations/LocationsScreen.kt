@@ -32,7 +32,7 @@ import org.koin.androidx.compose.getViewModel
 fun LocationsScreen() {
     val viewModel: LocationsViewModel = getViewModel()
     viewModel.fetchLocations()
-    val state by viewModel.characters.collectAsState()
+    val state by viewModel.locations.collectAsState()
 
     when (state) {
         is Success -> {

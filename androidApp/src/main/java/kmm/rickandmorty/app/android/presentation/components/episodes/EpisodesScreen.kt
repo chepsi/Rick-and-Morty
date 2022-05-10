@@ -33,7 +33,7 @@ fun EpisodesScreen() {
     val viewModel: EpisodesViewModel = getViewModel()
     viewModel.fetchEpisodes()
 
-    val state by viewModel.characters.collectAsState()
+    val state by viewModel.episodes.collectAsState()
 
     when (state) {
         is Success -> {
