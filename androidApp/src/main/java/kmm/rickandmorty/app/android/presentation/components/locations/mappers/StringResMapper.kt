@@ -16,7 +16,7 @@ sealed class StringResMapper {
     fun stringAble() : String {
         return when(this){
             is DynamicString -> stringValue
-            is StringResource -> stringResource(id = resID, formatArgs = *args)
+            is StringResource -> stringResource(id = resID, formatArgs = args)
         }
     }
     
