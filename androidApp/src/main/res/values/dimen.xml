@@ -37,6 +37,8 @@
     <dimen name="episodes_dimension_font">12sp</dimen>
     <dimen name="episodes_type_font">12sp</dimen>
 
+    <!--App Loader-->
+    <dimen name="app_loader_height">200dp</dimen>
 
 
 </resources>

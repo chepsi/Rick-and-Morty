@@ -1,12 +1,7 @@
 package kmm.rickandmorty.app.android.presentation.components.locations
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.IntrinsicSize.Max
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -21,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import kmm.rickandmorty.app.android.R
+import kmm.rickandmorty.app.android.presentation.components.core.AppLoader
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationPresentationModel
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationsUiState.Error
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationsUiState.Loading
@@ -47,7 +43,10 @@ fun LocationsScreen() {
             }
         }
         is Error -> Unit
-        Loading -> Unit
+        Loading -> {
+            AppLoader(modifier = Modifier.fillMaxSize(), imageID = R.drawable.morty_dance,
+                imageHeight = dimensionResource(id = R.dimen.app_loader_height))
+        }
     }
 }
 

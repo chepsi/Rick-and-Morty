@@ -3,9 +3,17 @@ package kmm.rickandmorty.app.android.presentation.components.core
 import android.os.Build.VERSION.SDK_INT
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.unit.Dp
@@ -36,13 +44,19 @@ fun AppLoader(
         }
         .build()
 
-    Image(
-        painter = rememberAsyncImagePainter(
-            ImageRequest.Builder(LocalContext.current).data(data = imageID)
-            .build(), imageLoader = imageLoader
-        ),
-        contentDescription = null,
-        modifier = modifier.height(imageHeight)
-    )
+    Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+
+
+        Image(
+            painter = rememberAsyncImagePainter(
+                ImageRequest.Builder(LocalContext.current).data(data = imageID)
+                    .build(), imageLoader = imageLoader
+            ),
+            contentDescription = null,
+            modifier = modifier.height(imageHeight),
+
+        )
+
+    }
 
 }

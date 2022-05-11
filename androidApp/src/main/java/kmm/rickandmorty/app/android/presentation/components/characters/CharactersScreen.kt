@@ -1,13 +1,8 @@
 package kmm.rickandmorty.app.android.presentation.components.characters
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.IntrinsicSize.Max
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells.Adaptive
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -33,6 +28,7 @@ import kmm.rickandmorty.app.android.presentation.components.characters.model.Cha
 import kmm.rickandmorty.app.android.presentation.components.characters.model.CharactersUiState.Error
 import kmm.rickandmorty.app.android.presentation.components.characters.model.CharactersUiState.Loading
 import kmm.rickandmorty.app.android.presentation.components.characters.model.CharactersUiState.Success
+import kmm.rickandmorty.app.android.presentation.components.core.AppLoader
 import kmm.rickandmorty.app.android.presentation.components.core.TopBar
 import kmm.rickandmorty.app.android.presentation.theme.lato
 import kmm.rickandmorty.app.android.presentation.theme.muli
@@ -61,8 +57,14 @@ fun CharactersScreen() {
                     }
                 }
             }
-            is Error -> {}
-            Loading -> {}
+            is Error -> {
+
+            }
+            Loading -> {
+                     AppLoader(modifier = Modifier.fillMaxSize(), imageID = R.drawable.morty_dance,
+                         imageHeight = dimensionResource(id = R.dimen.app_loader_height))
+
+            }
         }
     }
 }
