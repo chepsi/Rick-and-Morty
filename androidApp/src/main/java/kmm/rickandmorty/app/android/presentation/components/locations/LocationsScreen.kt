@@ -16,10 +16,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.*
+import kmm.rickandmorty.app.android.R
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationPresentationModel
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationsUiState.Error
 import kmm.rickandmorty.app.android.presentation.components.locations.model.LocationsUiState.Loading
@@ -37,8 +38,8 @@ fun LocationsScreen() {
     when (state) {
         is Success -> {
             LazyColumn(
-                contentPadding = PaddingValues(top = 10.dp, bottom = 60.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp)
+                contentPadding = PaddingValues(top = dimensionResource(id = R.dimen.location_list_content_top_padding), bottom = dimensionResource(id = R.dimen.location_list_content_bottom_padding)),
+                verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.location_list_spacer))
             ) {
                 items((state as Success).data) { location ->
                     Location(location = location)
@@ -53,23 +54,23 @@ fun LocationsScreen() {
 @Composable
 fun Location(location: LocationPresentationModel) {
     Card(
-        shape = RoundedCornerShape(10.dp),
+        shape = RoundedCornerShape(dimensionResource(id = R.dimen.location_corner_radius)),
         modifier = Modifier
             .height(Max)
             .fillMaxWidth()
-            .padding(horizontal = 20.dp)
+            .padding(horizontal = dimensionResource(id = R.dimen.location_card_horizontal_padding))
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(all = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(5.dp)
+                .padding(all = dimensionResource(id = R.dimen.location_column_padding)),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.location_column_spacer))
         ) {
             Text(
                 text = location.name,
                 fontFamily = lato,
                 fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
+                fontSize =16.sp
             )
             Text(
                 text = location.dimension,

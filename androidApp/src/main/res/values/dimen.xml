@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Locations Dimensions-->
+    <dimen name="location_list_content_top_padding">10dp</dimen>
+    <dimen name="location_list_content_bottom_padding">60dp</dimen>
+    <dimen name="location_list_spacer">10dp</dimen>
+
+    <dimen name="location_corner_radius">10dp</dimen>
+    <dimen name="location_card_horizontal_padding">20dp</dimen>
+    <dimen name="location_column_padding">10dp</dimen>
+    <dimen name="location_column_spacer">5dp</dimen>
+    <dimen name="location_name_font">16sp</dimen>
+    <dimen name="location_dimension_font">12sp</dimen>
+    <dimen name="location_type_font">12sp</dimen>
+
+
+    <!--Characters Dimensions-->
+    <dimen name="character_list_item_height">160dp</dimen>
+    <dimen name="character_list_bottom_padding">60dp</dimen>
+    <dimen name="character_list_items_content_padding">10dp</dimen>
+    <dimen name="character_height">220dp</dimen>
+    <dimen name="character_image_height">180dp</dimen>
+    <dimen name="character_image_corner_radius">10dp</dimen>
+    <dimen name="character_name_font">16sp</dimen>
+
+
+    <!--Episodes Dimensions-->
+    <dimen name="episodes_list_content_top_padding">10dp</dimen>
+    <dimen name="episodes_list_content_bottom_padding">60dp</dimen>
+    <dimen name="episodes_list_spacer">10dp</dimen>
+
+    <dimen name="episodes_corner_radius">10dp</dimen>
+    <dimen name="episodes_card_horizontal_padding">20dp</dimen>
+    <dimen name="episodes_column_padding">10dp</dimen>
+    <dimen name="episodes_column_spacer">5dp</dimen>
+    <dimen name="episodes_name_font">16sp</dimen>
+    <dimen name="episodes_dimension_font">12sp</dimen>
+    <dimen name="episodes_type_font">12sp</dimen>
+
+
+
+</resources>
