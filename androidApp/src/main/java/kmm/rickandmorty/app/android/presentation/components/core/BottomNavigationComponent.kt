@@ -37,10 +37,10 @@ fun BottomNavComponent(navController: NavHostController) {
                 icon = {
                     Icon(
                         painterResource(id = screen.icon),
-                        contentDescription = StringResMapper.StringResource(screen.title).stringAble()
+                        contentDescription = StringResMapper.StringResource(screen.title).getString()
                     )
                 },
-                label = { Text(text = StringResMapper.StringResource(screen.title).stringAble()) },
+                label = { Text(text = StringResMapper.StringResource(screen.title).getString()) },
                 selectedContentColor = Color.White,
                 unselectedContentColor = Color.White.copy(0.4f),
                 alwaysShowLabel = true,

@@ -1,26 +1,34 @@
 package kmm.rickandmorty.app.android.presentation.components.characters
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.IntrinsicSize.Max
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells.Adaptive
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.*
+import androidx.compose.ui.unit.ExperimentalUnitApi
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.TextUnitType
 import coil.compose.rememberAsyncImagePainter
 import kmm.rickandmorty.app.android.R
 import kmm.rickandmorty.app.android.presentation.components.characters.model.CharacterPresentationModel
@@ -57,13 +65,12 @@ fun CharactersScreen() {
                     }
                 }
             }
-            is Error -> {
-
-            }
+            is Error -> Unit
             Loading -> {
-                     AppLoader(modifier = Modifier.fillMaxSize(), imageID = R.drawable.morty_dance,
-                         imageHeight = dimensionResource(id = R.dimen.app_loader_height))
-
+                AppLoader(
+                    modifier = Modifier.fillMaxSize(), imageID = R.drawable.morty_dance,
+                    imageHeight = dimensionResource(id = R.dimen.app_loader_height)
+                )
             }
         }
     }

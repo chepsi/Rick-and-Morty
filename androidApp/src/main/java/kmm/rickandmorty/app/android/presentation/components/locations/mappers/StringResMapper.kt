@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 
 sealed class StringResMapper {
-    data class DynamicString(val stringValue:String) : StringResMapper()
+    data class DynamicString(val value: String) : StringResMapper()
     class StringResource(
         @StringRes
         val resID: Int,
@@ -13,11 +13,10 @@ sealed class StringResMapper {
     ) : StringResMapper()
 
     @Composable
-    fun stringAble() : String {
-        return when(this){
-            is DynamicString -> stringValue
+    fun getString(): String {
+        return when (this) {
+            is DynamicString -> value
             is StringResource -> stringResource(id = resID, formatArgs = args)
         }
     }
-    
 }
