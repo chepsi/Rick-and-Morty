@@ -5,7 +5,7 @@ import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import kotlinx.serialization.json.Json
 
-val httpClient = HttpClient() {
+val httpClient = HttpClient {
     install(JsonFeature) {
         val json = Json { ignoreUnknownKeys = true }
         serializer = KotlinxSerializer(json)

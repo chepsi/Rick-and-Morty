@@ -9,9 +9,6 @@
     <dimen name="location_card_horizontal_padding">20dp</dimen>
     <dimen name="location_column_padding">10dp</dimen>
     <dimen name="location_column_spacer">5dp</dimen>
-    <dimen name="location_name_font">16sp</dimen>
-    <dimen name="location_dimension_font">12sp</dimen>
-    <dimen name="location_type_font">12sp</dimen>
 
 
     <!--Characters Dimensions-->
@@ -33,9 +30,6 @@
     <dimen name="episodes_card_horizontal_padding">20dp</dimen>
     <dimen name="episodes_column_padding">10dp</dimen>
     <dimen name="episodes_column_spacer">5dp</dimen>
-    <dimen name="episodes_name_font">16sp</dimen>
-    <dimen name="episodes_dimension_font">12sp</dimen>
-    <dimen name="episodes_type_font">12sp</dimen>
 
     <!--App Loader-->
     <dimen name="app_loader_height">200dp</dimen>
