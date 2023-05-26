@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import kmm.rickandmorty.app.android.presentation.components.core.NavigationDestinations.Characters
 import kmm.rickandmorty.app.android.presentation.components.core.NavigationDestinations.Episodes
 import kmm.rickandmorty.app.android.presentation.components.core.NavigationDestinations.Locations
+import kmm.rickandmorty.app.android.presentation.components.locations.mappers.StringResMapper
 import kmm.rickandmorty.app.android.presentation.theme.PrimaryTeal
 
 @Composable
@@ -36,10 +37,10 @@ fun BottomNavComponent(navController: NavHostController) {
                 icon = {
                     Icon(
                         painterResource(id = screen.icon),
-                        contentDescription = screen.title
+                        contentDescription = StringResMapper.StringResource(screen.title).getString()
                     )
                 },
-                label = { Text(text = screen.title) },
+                label = { Text(text = StringResMapper.StringResource(screen.title).getString()) },
                 selectedContentColor = Color.White,
                 unselectedContentColor = Color.White.copy(0.4f),
                 alwaysShowLabel = true,
