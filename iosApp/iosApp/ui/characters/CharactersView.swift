@@ -10,7 +10,41 @@ import SwiftUI
 
 struct CharactersView: View {
     var body: some View {
-        Text("Character")
+        
+        ScrollView(showsIndicators: false) {
+            VStack {
+                HStack{
+                    Image("character")
+                        .renderingMode(.template)
+                        .foregroundColor(ColorManager.primary)
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        ZStack {
+                            Image("search")
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.white)
+                        }
+                    }
+                }
+                .padding()
+                Spacer()
+                
+                ZStack {
+                    Image("character_overlay")
+                        .offset(y: 15)
+                    
+                    BannerTabview()
+                        .frame(width: UIScreen.main.bounds.width - 50, height: 210)
+                        .padding(.vertical, 20)
+                }
+                Spacer()
+                Spacer()
+                Spacer()
+                Text("Character")
+            }
+        }
     }
 }
 
