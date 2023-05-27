@@ -6,7 +6,6 @@ plugins {
 }
 
 version = "1.0"
-val ktorVersion = "1.6.7"
 
 kotlin {
     android()
@@ -28,29 +27,29 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-core:1.6.7")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
                 implementation("io.ktor:ktor-client-serialization:1.6.7")
-                implementation("io.insert-koin:koin-core:3.1.5")
+                implementation("io.insert-koin:koin-core:3.2.0")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("io.ktor:ktor-client-mock:$ktorVersion")
-                implementation("io.mockk:mockk-common:1.12.2")
+                implementation("io.ktor:ktor-client-mock:1.6.7")
+                implementation("io.mockk:mockk-common:1.12.3")
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-android:$ktorVersion")
+                implementation("io.ktor:ktor-client-android:1.6.7")
             }
         }
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("io.ktor:ktor-client-mock:$ktorVersion")
-                implementation("io.mockk:mockk:1.12.2")
+                implementation("io.ktor:ktor-client-mock:1.6.7")
+                implementation("io.mockk:mockk:1.12.3")
             }
         }
         val androidTest by getting
@@ -64,7 +63,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
 
             dependencies {
-                implementation("io.ktor:ktor-client-ios:$ktorVersion")
+                implementation("io.ktor:ktor-client-ios:1.6.7")
             }
         }
         val iosX64Test by getting
@@ -84,10 +83,10 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 33
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
-        targetSdk = 31
     }
+    namespace = "kmm.rickandmorty.app"
 }
